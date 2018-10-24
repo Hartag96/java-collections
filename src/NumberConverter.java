@@ -14,26 +14,26 @@ public class NumberConverter {
         }
     }
 
-    public static String jednocyfrowe(int n) {
+    private static String jednocyfrowe(int n) {
         String[] word = {"", "jeden", "dwa", "trzy", "cztery", "piec", "szesc", "siedem", "osiem", "dziewiec"};
         return word[n];
     }
 
-    public static String nascie(int n) {
+    private static String nascie(int n) {
         String[] word = {"jedenascie", "dwanascie", "trzynascie", "czternascie", "pietnascie", "szesnascie", "siedemnascie", "osiemnascie", "dziewietnascie"};
         return word[n - 1];
     }
 
-    public static String dwucyfrowe(int n) {
+    private static String dwucyfrowe(int n) {
         String[] word = {"dziesiec", "dwadziescia", "trzydziesci", "czterdziesci", "piecdziesiat", "szescdziesiac", "siedemdziesiac", "osiemdziesiat", "dziewiecdziesiat"};
         return word[n - 1];
     }
 
-    public static String trzycyfrowe(int n) {
+    private static String trzycyfrowe(int n) {
         String[] word = {"sto", "dwiescie", "trzysta", "czterysta", "piecset", "szescset", "siedemset", "osiemset", "dziewiecset"};
         return word[n - 1];
     }
 
-    public static class WrongNumberException extends Exception {
+    static class WrongNumberException extends Exception {
     }
 }
