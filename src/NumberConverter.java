@@ -50,12 +50,16 @@ public class NumberConverter {
         if (n >= 0 && n < 20) {
             return map.get(n);
         } else if (n >= 20 && n < 100) {
-            return String.join(" ", map.get((n/10)*10), n % 10 != 0 ? map.get(n % 10) : "");
+            return String.join(" ",
+                    map.get((n/10)*10),
+                    n % 10 != 0 ? map.get(n % 10) : ""
+            );
         } else if (n > 100 && n < 1000) {
             return String.join(" ",
                     map.get((n / 100)*100),
                     (((n % 10) / 10)*10) != 0 ? map.get(((n % 10) / 10)*10) : "",
-                    n % 100 != 0 ? map.get(n / 100) : "");
+                    n % 100 != 0 ? map.get(n / 100) : ""
+            );
         } else {
             throw new WrongNumberException();
         }
