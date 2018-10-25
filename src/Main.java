@@ -11,10 +11,10 @@ public class Main{
 ////        //      1
         NumberConverter numberConverter = new NumberConverter();
         try{
-            System.out.println(numberConverter.converter(5));
+            System.out.println(numberConverter.converter(0));
             System.out.println(numberConverter.converter(15));
-            System.out.println(numberConverter.converter(35));
-            System.out.println(numberConverter.converter(421));
+            System.out.println(numberConverter.converter(30));
+            System.out.println(numberConverter.converter(500));
             System.out.println(numberConverter.converter(4000));
         }catch (NumberConverter.WrongNumberException e){
             System.out.println("Blad! \nNumer z poza zakresu 1 - 999");
